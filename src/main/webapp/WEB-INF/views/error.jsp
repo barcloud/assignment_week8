@@ -19,7 +19,7 @@
 <body>
     <div  class="container">
         <h1>密码错误，请重试！</h1>
-        <p><a class="btn btn-primary" href="login.jsp" role="button">重试</a></p>
+        <p><a class="btn btn-primary" href="/login" role="button">重试</a></p>
     </div>
 
 </body>

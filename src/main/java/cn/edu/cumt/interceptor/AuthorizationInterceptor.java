@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class AuthorizationInterceptor  implements HandlerInterceptor {
 
     // 不拦截"/loginForm"和"/login"请求
-    private static final String[] IGNORE_URI = {"/check","/login"};
+    private static final String[] IGNORE_URI = {"/check","/login","/changeStatus","/cookieCheck"};
 
     /**
      * 该方法将在整个请求完成之后执行， 主要作用是用于清理资源的，
@@ -63,7 +63,7 @@ public class AuthorizationInterceptor  implements HandlerInterceptor {
                 // 如果用户没有登录，则设置提示信息，跳转到登录页面
                 System.out.println("AuthorizationInterceptor拦截请求：");
                 request.setAttribute("message", "请先登录再访问网站");
-                request.getRequestDispatcher("check").forward(request, response);
+                request.getRequestDispatcher("cookieCheck").forward(request, response);
             }else{
                 // 如果用户已经登录，则验证通过，放行
                 System.out.println("AuthorizationInterceptor放行请求：");

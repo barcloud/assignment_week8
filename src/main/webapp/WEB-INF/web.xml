@@ -3,9 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    <listener>
-        <listener-class>cn.edu.cumt.Listener.Listener1</listener-class>
-    </listener>
     <servlet>
         <servlet-name>spring_mvc</servlet-name>
         <servlet-class>
@@ -23,7 +20,17 @@
         <servlet-name>spring_mvc</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+    <!--contextConfigLocation在 ContextLoaderListener类中的默认值是 /WEB-INF/applicationContext.xml-->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:spring/beans.xml</param-value>
+        <!-- <param-value>classpath:applicationContext*.xml</param-value> -->
+    </context-param>
     <!-- 编码过滤器 -->
     <filter>
         <filter-name>characterEncodingFilter</filter-name>

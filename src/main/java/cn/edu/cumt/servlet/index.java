@@ -18,6 +18,7 @@ public class index extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         System.out.println("index Servlet正常工作");
         ServletContext application = request.getServletContext();
         HttpSession session =request.getSession();

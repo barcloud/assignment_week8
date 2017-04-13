@@ -31,7 +31,7 @@
                 </tr>
             </c:forEach>
         </table>
-        <a class="btn btn-primary" href="index.html" role="button">返回</a>
+        <a class="btn btn-primary" href="/indexRD" role="button">返回</a>
         <a class="btn btn-primary" href="#" role="button">提交订单</a>
     </div>
 

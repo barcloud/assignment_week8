@@ -18,7 +18,7 @@
     <div class="container">
         <h1>凤雏商城为您服务</h1>
         <p>现在已有${applicationScope["counter"]}访问页面.</p>
-        <p><a class="btn btn-primary btn-lg" href="/login" role="button">${sessionScope["status"]}</a></p>
+        <p><a class="btn btn-primary btn-lg" href="/changeStatus" role="button">${status}</a></p>
     </div>
 </div>
     <article class="container">

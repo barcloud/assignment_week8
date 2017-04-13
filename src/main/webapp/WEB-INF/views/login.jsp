@@ -20,7 +20,7 @@
 
     <article class="col-md-4 col-md-offset-4">
         <p>${requestScope.message }</p>
-        <form action="/login" method="post">
+        <form action="/loginCheck" method="post">
             <div class="form-group">
                 <label for="usrName">UserName:</label>
                 <input type="text" class="form-control" name="usrName" id="usrName" placeholder="UserName">
