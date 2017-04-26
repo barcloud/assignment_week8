@@ -37,6 +37,7 @@ public class mainController {
             mv.setViewName("redirect:cookieCheck");
         }else{
             request.getSession().setAttribute("user",null);
+            user=null;
             redirectAttributes.addFlashAttribute("status","Login");
             mv.setViewName("redirect:index");
         }
@@ -102,7 +103,7 @@ public class mainController {
     }
     @RequestMapping(value= "/indexRD")
     public ModelAndView indexRD(RedirectAttributes redirectAttributes){
-        redirectAttributes.addFlashAttribute("status","Logout");
+        //redirectAttributes.addFlashAttribute("status","Logout");
         return new ModelAndView("redirect:index");
     }
     @RequestMapping(value= "/index")

@@ -18,7 +18,12 @@
     <div class="container">
         <h1>凤雏商城为您服务</h1>
         <p>现在已有${applicationScope["counter"]}访问页面.</p>
-        <p><a class="btn btn-primary btn-lg" href="/changeStatus" role="button">${status}</a></p>
+        <c:if test="${status!=null}">
+            <p><a class="btn btn-primary btn-lg" href="/changeStatus" role="button">${status}</a></p>
+        </c:if>
+        <c:if test="${status==null}">
+            <p><a class="btn btn-primary btn-lg" href="/changeStatus" role="button">Login</a></p>
+        </c:if>
     </div>
 </div>
     <article class="container">

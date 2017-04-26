@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class AuthorizationInterceptor  implements HandlerInterceptor {
 
     // 不拦截"/loginForm"和"/login"请求
-    private static final String[] IGNORE_URI = {"/check","/login","/changeStatus","/cookieCheck"};
+    private static final String[] IGNORE_URI = {"/index","/check","/login","/changeStatus","/cookieCheck"};
 
     /**
      * 该方法将在整个请求完成之后执行， 主要作用是用于清理资源的，
